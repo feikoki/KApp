@@ -16,7 +16,7 @@
 <ion-content>
   <div [style.background-image]="safeStyle(group.imageUrl)" class="banner"></div>
 
-  <ion-list [style.display]="'none'">
+  <ion-list>
     <ion-list-header>Leaderboard</ion-list-header>
     <ion-item *ngFor="let item of leaderboard">
       {{item.name}}
@@ -26,12 +26,12 @@
     <ion-item>
       <div class="big-button-group">
         <button ion-button clear>
-          <div class="big-button-inner">
+          <div class="big-button-inner" (click)="onShare()">
             <ion-icon name="share"></ion-icon>Share
           </div>
         </button>
         <button ion-button clear>
-          <div class="big-button-inner">
+          <div class="big-button-inner" (click)="onGetLink()">
             <ion-icon name="link"></ion-icon>Get Invite Link
           </div>
         </button>

@@ -12,9 +12,11 @@ import { DevicesPage } from '../pages/devices/devices';
 import { TypesPage } from '../pages/types/types';
 import { CreateGroupPage } from '../pages/create-group/create-group';
 import { GroupInfoPage } from '../pages/group-info/group-info';
+import { EditProfilePage } from '../pages/edit-profile/edit-profile';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TypesPage,
     CreateGroupPage,
     GroupInfoPage,
+    EditProfilePage,
   ],
   imports: [
     BrowserModule,
@@ -45,11 +48,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TypesPage,
     CreateGroupPage,
     GroupInfoPage,
+    EditProfilePage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SocialSharing
   ]
 })
 export class AppModule {}

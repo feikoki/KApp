@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TypesPage } from '../types/types';
 import { storage } from '../../storage';
+import { EditProfilePage } from '../edit-profile/edit-profile';
 
 @Component({
   selector: 'page-home',
@@ -51,6 +52,10 @@ export class HomePage {
     const today = new Date();
     if (this.date.getTime() > today.getTime())
       this.date = today;
+  }
+
+  onEditProfile() {
+    this.navCtrl.push(EditProfilePage);
   }
 
 }

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Profile
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="onViewDevices()">Devices</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-lines>
+  <ion-list>
+    <ion-item>
+      <img class="avatar" item-start>
+      <h2>{{user.fullName}}</h2>
+      <p>Hong Kong</p>
+    </ion-item>
+
+    <ion-item>
+      <h2>Activity this week</h2>
+      <p>1 hour 20 minutes</p>
+    </ion-item>
+
+    <ion-item>
+      <h2>Distance ran</h2>
+      <p>12km</p>
+    </ion-item>
+
+    <ion-list-header>
+      {{user.fullName}}'s Groups
+    </ion-list-header>
+
+    <ion-item *ngFor="let group of user.groups">
+      {{group}}
+    </ion-item>
+
+  </ion-list>
+</ion-content>

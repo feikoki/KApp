@@ -1,6 +1,6 @@
 {
   "name": "kapp",
-  "app_id": "",
+  "app_id": "937a460a",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

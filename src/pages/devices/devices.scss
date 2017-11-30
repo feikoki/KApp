@@ -1,0 +1,14 @@
+.device-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.device-square {
+  width: 33.3vw; height: 33.3vw;
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+.device-square img {
+  width: 100%; height: 100%;
+}

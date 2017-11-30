@@ -1,0 +1,49 @@
+<!--
+  Generated template for the GroupInfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{group.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div [style.background-image]="safeStyle(group.imageUrl)" class="banner"></div>
+
+  <ion-list [style.display]="'none'">
+    <ion-list-header>Leaderboard</ion-list-header>
+    <ion-item *ngFor="let item of leaderboard">
+      {{item.name}}
+      <div item-end>{{item.value}}</div>
+    </ion-item>
+
+    <ion-item>
+      <div class="big-button-group">
+        <button ion-button clear>
+          <div class="big-button-inner">
+            <ion-icon name="share"></ion-icon>Share
+          </div>
+        </button>
+        <button ion-button clear>
+          <div class="big-button-inner">
+            <ion-icon name="link"></ion-icon>Get Invite Link
+          </div>
+        </button>
+        <button ion-button clear>
+          <div class="big-button-inner">
+            <ion-icon name="person-add"></ion-icon>View Invites
+          </div>
+        </button>
+      </div>
+    </ion-item>
+
+    <ion-list-header>Chat</ion-list-header>
+  </ion-list>
+
+</ion-content>

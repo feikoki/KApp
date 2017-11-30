@@ -38,11 +38,10 @@
   <ion-list>
     <ion-list-header>Connect New Device</ion-list-header>
   </ion-list>
-  <div class="device-grid">
-    <div *ngFor="let device of devices" class="device-square"
-        (click)="onAddDevice(device)">
+  <ion-row wrap>
+    <ion-col col-4 *ngFor="let device of devices" (click)="onAddDevice(device)">
       <img src="assets/devices/{{device.image}}">
-    </div>
-  </div>
+    </ion-col>
+  </ion-row>
 
 </ion-content>

@@ -3,15 +3,22 @@
     <ion-title>
       Groups
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-left (click)="onCreateGroup()">
+        <ion-icon name="add"></ion-icon> Create
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
+    <ion-list-header>Your Groups</ion-list-header>
+    <ion-row style="overflow-x: auto; flex-wrap: nowrap">
+      <div *ngFor="let group of groups" class="group" (click)="onViewGroup(group)">
+        <div [style.background-image]="safeStyle(group.imageUrl)" class="image"></div>
+         <div>{{group.name}}</div>
+      </div>
+    </ion-row>
   </ion-list>
 </ion-content>

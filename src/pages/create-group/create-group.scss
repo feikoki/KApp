@@ -1,0 +1,25 @@
+page-create-group {
+
+  .uploader {
+    display: flex; justify-content: center;
+  }
+
+  .uploader-input {
+    width: 0.1px; height: 0.1px; opacity: 0;
+  }
+
+  .uploader-label {
+    display: block;
+    width: 120px; height: 120px;
+    border-radius: 60px;
+
+    background-color: #ccc;
+    background-size: cover;
+  }
+
+  .uploader-preview {
+    width: 120px; height: 120px;
+    border-radius: 60px;
+  }
+
+}

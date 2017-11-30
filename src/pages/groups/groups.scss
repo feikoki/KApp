@@ -1,3 +1,20 @@
 page-groups {
 
+  .group {
+    display: flex; flex-direction: column;
+    align-items: center;
+
+    margin: 8px;
+  }
+
+  .image {
+    width: 80px; height: 80px;
+    border-radius: 60px;
+    border: 3px solid #c751ec;
+    margin-bottom: 2px;
+
+    background-color: #ccc;
+    background-size: cover;
+  }
+
 }

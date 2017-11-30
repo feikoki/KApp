@@ -1,0 +1,52 @@
+<!--
+  Generated template for the CreateGroupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Create Group</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="onSave()">Save</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form ngNoForm (submit)="onSave(); $event.preventDefault()">
+    <ion-list>
+      <ion-item>
+        <div>Upload photo</div>
+        <div class="uploader">
+          <input type="file" id="image" class="uploader-input"
+            (change)="onUploadImage($event)">
+          <label for="image" class="uploader-label"
+            [style.background-image]="safeStyle(imageUrl)"></label>
+        </div>
+      </ion-item>
+      <ion-item>
+        <ion-label>Group Name</ion-label>
+        <ion-input type="text" [(ngModel)]="name" required autofocus></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Description</ion-label>
+        <ion-textarea [(ngModel)]="description"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Privacy</ion-label>
+        <ion-select [(ngModel)]="privacy">
+          <ion-option value="public">Everyone</ion-option>
+          <ion-option value="private">By Approval</ion-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-list>
+  </form>
+
+</ion-content>

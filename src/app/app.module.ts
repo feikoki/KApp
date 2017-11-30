@@ -10,6 +10,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { SignupPage } from '../pages/signup/signup';
 import { DevicesPage } from '../pages/devices/devices';
 import { TypesPage } from '../pages/types/types';
+import { CreateGroupPage } from '../pages/create-group/create-group';
+import { GroupInfoPage } from '../pages/group-info/group-info';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,6 +26,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SignupPage,
     DevicesPage,
     TypesPage,
+    CreateGroupPage,
+    GroupInfoPage,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SignupPage,
     DevicesPage,
     TypesPage,
+    CreateGroupPage,
+    GroupInfoPage,
   ],
   providers: [
     StatusBar,

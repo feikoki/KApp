@@ -23,7 +23,7 @@ export class TabsPage {
 
   ionViewWillEnter() {
     const user = storage.get('user');
-    if (!user) {
+    if (!user.fullName) {
       this.navCtrl.push(SignupPage, {}, {animate: false});
     }
   }
